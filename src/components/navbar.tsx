@@ -20,73 +20,73 @@ export default function Navbar({ className, side, sideOffset }: NavbarProps) {
     return [
       {
         label: "Python Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/python.svg",
         active: pathname === "/python",
         href: "/python",
       },
       {
         label: "R Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/r.svg",
         active: pathname === "/r",
         href: "/r",
       },
       {
         label: "Java Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/java.svg",
         active: pathname === "/java",
         href: "/java",
       },
       {
         label: "C Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/c.svg",
         active: pathname === "/c",
         href: "/c",
       },
       {
         label: "C++ Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/cplusplus.svg",
         active: pathname === "/cpp",
         href: "/cpp",
       },
       {
         label: "C# Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/csharp.svg",
         active: pathname === "/csharp",
         href: "/csharp",
       },
       {
         label: "JavaScript Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/javascript.svg",
         active: pathname === "/javascript",
         href: "/javascript",
       },
       {
         label: "Go Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/go.svg",
         active: pathname === "/go",
         href: "/go",
       },
       {
         label: "Php Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/php.svg",
         active: pathname === "/php",
         href: "/php",
       },
       {
         label: "Swift Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/swift.svg",
         active: pathname === "/swift",
         href: "/swift",
       },
       {
         label: "TypeScript Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/typescript.svg",
         active: pathname === "/typescript",
         href: "/typescript",
       },
       {
         label: "Rust Complier",
-        icon: "/icons/icon.svg",
+        icon: "/icons/rust.svg",
         active: pathname === "/rust",
         href: "/rust",
       },
@@ -103,10 +103,10 @@ export default function Navbar({ className, side, sideOffset }: NavbarProps) {
           key={route.label}>
           <Link
             className={cn(
-              "rounded-md border border-neutral-800 p-2 transition hover:border-teal-900",
+              "rounded-md border border-neutral-800 p-2 transition hover:border-green-800",
               className,
-              route.active && "border-teal-900 bg-teal-900",
-              route.active && "hover:border-teal-900 hover:bg-teal-900",
+              route.active && "border-green-800 bg-green-800",
+              route.active && "hover:border-green-800 hover:bg-green-800",
             )}
             href={route.href}>
             <Image

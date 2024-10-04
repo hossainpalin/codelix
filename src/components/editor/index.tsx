@@ -58,7 +58,7 @@ export default function Editor({
       <ResizablePanel className="bg-[#1E1E1E]" defaultSize={50} minSize={25}>
         <LanguageEditor
           options={{
-            fontSize: 16,
+            fontSize: 17,
             contextmenu: false,
             minimap: { enabled: false },
             mouseWheelZoom: true,
@@ -75,7 +75,7 @@ export default function Editor({
       </ResizablePanel>
       <ResizableHandle className="border border-neutral-700/50" />
       <ResizablePanel className="bg-[#1E1E1E]" defaultSize={50} minSize={25}>
-        <div className="flex h-full flex-col justify-between p-5">
+        <div className="relative flex h-full flex-col justify-between overflow-y-auto p-5">
           <div>
             <div>
               {output &&
@@ -99,7 +99,7 @@ export default function Editor({
             </div>
           </div>
 
-          <div>
+          <div className="sticky bottom-0 left-0 flex w-full justify-center">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}

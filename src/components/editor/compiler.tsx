@@ -11,7 +11,10 @@ import { Button } from "../ui/button";
 interface LanguageProps {
   title: string;
   subTitle: string;
-  language: string;
+  language: {
+    editor: string;
+    compiler: string;
+  };
   version: string;
   codeSnippet: string;
   className?: string;
@@ -41,7 +44,7 @@ export default function Compiler({
 
   const executeCode = async () => {
     const requestData = {
-      language: language,
+      language: language.compiler,
       version: version,
       files: [
         {
@@ -107,7 +110,7 @@ export default function Compiler({
         className,
       )}>
       <div className="sticky left-0 top-1 z-10 mb-3 flex w-full items-center justify-between bg-neutral-950 pb-1">
-        <div className="xs:block hidden">
+        <div className="hidden xs:block">
           <h1 className="text-xl font-semibold text-neutral-300 sm:text-2xl">
             {title}
           </h1>
@@ -142,7 +145,7 @@ export default function Compiler({
       <div className="hidden h-full w-full md:block">
         <Editor
           editorRef={editorRef}
-          language={language}
+          language={language.editor}
           version={version}
           codeSnippet={codeSnippet}
           sourceCode={sourceCode}
@@ -158,7 +161,7 @@ export default function Compiler({
       <div className="block h-full w-full md:hidden">
         <Editor
           editorRef={editorRef}
-          language={language}
+          language={language.editor}
           version={version}
           codeSnippet={codeSnippet}
           sourceCode={sourceCode}
