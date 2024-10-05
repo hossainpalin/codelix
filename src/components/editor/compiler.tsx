@@ -73,9 +73,9 @@ export default function Compiler({
         return;
       }
 
-      console.log(response.data);
-
       setIsLoading(false);
+
+      console.log(response.data)
 
       if (response.data.run.stderr) {
         setError(response.data.run.stderr);

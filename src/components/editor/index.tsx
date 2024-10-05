@@ -99,7 +99,10 @@ export default function Editor({
             </div>
           </div>
 
-          <div className="sticky bottom-0 left-0 flex w-full justify-center">
+          <div className="sticky bottom-0 left-0 flex w-full flex-col justify-center gap-y-2">
+            <p className="font-semibold text-neutral-400">
+              Compile with input
+            </p>
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}
